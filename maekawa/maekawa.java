@@ -5,7 +5,7 @@ public class maekawa {
     static boolean locked = false;
     static Queue<Integer> queue = new LinkedList<>();
 
-    static void request(int przocessId) {
+    static void request(int processId) {
         try {
             if (!locked) {
                 locked = true;

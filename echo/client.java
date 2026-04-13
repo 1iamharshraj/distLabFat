@@ -4,7 +4,7 @@ import java.util.*;
 
 
 public class client{
-    public static void main(String[] arg){
+    public static void main(String[] arg)throws Exception{
         Socket s = new Socket("localhost", 1234);
 
         BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));

@@ -5,6 +5,7 @@ import java.net.*;
 
 public class Client{
     public static void main(String args[]){
+        try{
         Socket s = new Socket("localhost", 1234);
 
         BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
@@ -17,5 +18,8 @@ public class Client{
             System.out.println(in.readLine());
         }
         s.close();
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 }

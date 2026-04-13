@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.*;
 
 public class client{
-    public static void main(String args[]){
+    public static void main(String args[])throws Exception{
         Socket s = new Socket("localhost",1234);
 
         BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
@@ -22,7 +22,7 @@ public class client{
 
         }).start();
 
-        BufferReader kb = new BufferReader(new InputStreamReader(System.in));
+        BufferedReader kb = new BufferedReader(new InputStreamReader(System.in));
         
         String msg;
         while((msg = kb.readLine()) != null){

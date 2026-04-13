@@ -1,5 +1,5 @@
 import java.rmi.*;
 
-public interface Calc extends Remote {
+public interface calc extends Remote {
     int add(int a, int b) throws RemoteException;
 }

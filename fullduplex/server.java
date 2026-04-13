@@ -2,11 +2,11 @@ import java.net.*;
 import java.io.*;
 
 public class server{
-    public static void main(String args[]){
+    public static void main(String args[])throws Exception{
         ServerSocket ss = new ServerSocket(1234);
         Socket s = ss.accept();
 
-        BufferedReader in = new BufferReader(new InputStreamReader(s.getInputStream()));
+        BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
         PrintWriter out = new PrintWriter(s.getOutputStream(),true);
 
         new Thread(()->{
@@ -22,7 +22,7 @@ public class server{
 
         }).start();
 
-        BufferReader kb = new BufferReader(new InputStreamReader(System.in));
+        BufferedReader kb = new BufferedReader(new InputStreamReader(System.in));
         
         String msg;
         while((msg = kb.readLine()) != null){
